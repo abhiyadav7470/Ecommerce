@@ -1,14 +1,13 @@
 import {React, useState} from 'react';
 import {auth} from '../../Firebase';
-import {toast, ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import {toast} from 'react-toastify';
 const Register =()=>{
     const [email, setEmail] = useState('');
     const handleSubmit= async (e)=>{
+        console.log(process.env.REACT_APP_REGISTER_REDIRECT_URL)
         e.preventDefault();
         const config={
-            url: "http://localhost:3000/register/complete",
+            url:    process.env.REACT_APP_REGISTER_REDIRECT_URL,
             handleCodeInApp: true
         };
 
@@ -25,14 +24,14 @@ const Register =()=>{
     };
     
     return(
-        <><ToastContainer/>
+        <>
             <div className="container p-5">
                 <div className="row">
                     <div className="col-md-6 offset-md-3">
                     <form onSubmit={handleSubmit}>
                         <h1>Register</h1>
                         <input type='email' className="form-control my-3" value={email} onChange={e=> setEmail(e.target.value)} autoFocus></input>
-                        <button className='btn btn-raised'>Register</button>
+                        <button type='submit' className='btn btn-raised'>Register</button>
                     </form>
                 
                     </div>
