@@ -1,24 +1,3 @@
-// import * as firebase from 'firebase';
-// import { initializeApp } from 'firebase/app';
-// // Your web app's Firebase configuration
-// const firebaseConfig = {
-//     apiKey: "AIzaSyB7Fbqd9y8RCByxLyGTsdfcVWkFj0s73e0",
-//     authDomain: "ecommerce-7dba0.firebaseapp.com",
-//     projectId: "ecommerce-7dba0",
-//     storageBucket: "ecommerce-7dba0.appspot.com",
-//     messagingSenderId: "1030043578517",
-//     appId: "1:1030043578517:web:da927975c60b6f21ae2b9c"
-//   };
-  
-//   // Initialize Firebase
-//   const app = initializeApp(firebaseConfig);
-
-//   export const auth = firebase.auth();
-//   export const googleAuthProvider = new firebase.auth.googleAuthProvider()
-
-
-
-
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
